@@ -10,7 +10,7 @@
 ---
 ## Deployed Link
 
-* [Horiseon]( https://705h-s.github.io/Accessibility-Refactoring-Client-/
+* [Horiseon]( https://705h-s.github.io/Alpha-Horisen-Refactor/
 )
 
 ![Webpage](images/WEBPAGE.png)
