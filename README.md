@@ -1,44 +1,76 @@
-# Accessibility-Refactoring-Client-
-semantic Htmls elements were added.
-Replaced a lot of unnecessary <dev> tags with appropriate <nav>, <section>, <article>, <footer> tags. 
-example:
+# Horiseon refactoring code
+ Refactored Horiseon's site codebase so that it complies with accessibility standards and is optimized for search engines all with out changing the websites UI. 
 
-<code>
-<section class="search-engine-optimization">
-            <img src="./assets/images/search-engine-optimization.jpg" class="float-left" />
-            <h2>Search Engine Optimization</h2>
-            <p>
-                The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
-            </p>
-        </section>
-</code>
- 
- <section> was used insead of <dev> because  <section> element is slightly more specific that of a <div>.
---------------------------------------------------------------------------------------------------------------------------------
-Minimizing CSS Code lines by Merging three classes with the same properties to one single class. The Old code was using them as IDs when in fact they should've been used as class. 
-Example:
- OLD CODE
-<code>
-.benefit-lead {                             This was the original code.
-    margin-bottom: 32px;
-    color: #ffffff;
-}
+---
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
+## Built With
 
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-</code>
-NEW CODE
-</code>                        This is the new code. lbc stands for Lead, Brand, Cost.
-.benefit-lbc {                       
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-</code>
---------------------------------------------------------------------------------------------------------------------------------
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+---
+## Deployed Link
+
+* [Horiseon]( https://705h-s.github.io/Accessibility-Refactoring-Client-/
+)
+
+![Webpage](images/WEBPAGE.png)
+
+---
+
+## Refactoring 
+First initial look at the HTML source code I didn't find a lot of semantic HTML elements. 
+* [Semantic HTML Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
+<br>
+For example in the original code `<Div>` tags were used instead of `<footer>` tags. 
+<br>
+-**Original Code**-
+<br>
+```html
+<div class="footer">
+        <h2>Made with ❤️️ by Horiseon</h2>
+        <p>
+            &copy; 2019 Horiseon Social Solution Services, Inc.
+        </p>
+    </div>
+```
+<br>
+
+By changing the tags it allows the site to be more accessible. It also removes the need to use a `<class="footer">` tag. In CSS they can use a element selector instead of a class selector.
+
+-**New Code**-
+
+<br>
+
+```HTML
+<footer>
+        <h4>Made with ❤️️ by Horiseon</h4>
+        <p>
+            &copy; 2019 Horiseon Social Solution Services, Inc.
+        </p>
+    </footer>
+```
+<br>
+
+ > Note that the heading attributes were also changed to fall in a sequential order. 
+<br>
+
+Another change was made to the `<title>` of sourcecode. 
+In the original code it was stated as `<title>website</title>` and for it to be optimized in search engines it was changed to `<title>Horiseon</title>`.
+
+![title](images/Title.png)
+
+---
+## Issue and resolvement 
+An issue within the site was that when user clicked on one of the nav links it wouldn't take them directly to the corresponding topic in the site itself.
+
+This was resolved by revisiting the index.html and looking over the code that's conntected to the nav links. Upon insepection I found an `<ID="">` was missing. By adding the missing code nav links now work and issue was resolved. 
+
+
+---
+## License
+Site and Company owned by respective 
+© 2019 Horiseon Social Solution Services, Inc.
+
+---
+##### Refactoring done by Joshua Meza
+[GitHub](https://github.com/705h-S)
