@@ -21,10 +21,12 @@
 First initial look at the HTML source code I didn't find a lot of semantic HTML elements. 
 * [Semantic HTML Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
 <br>
-For example in the original code `<Div>` tags were used instead of `<footer>` tags. 
+
+For example in the original code  `<Div>`  tags were used instead of  `<footer>`  tags. 
 <br>
 -**Original Code**-
 <br>
+
 ```html
 <div class="footer">
         <h2>Made with ❤️️ by Horiseon</h2>
